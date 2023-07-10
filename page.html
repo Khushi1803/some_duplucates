@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+.title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+    }
+
+    input::placeholder {
+      color: #eee;
+    }
+
+    .colums {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .colums div {
+      width: 48%;
+    }
+
+    .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+    }
+
+    .checkbox a {
+      color: #26a9e0;
+    }
+
+    .checkbox a:hover {
+      color: #85d6de;
+    }
+
+/* Set a style for all buttons */
+.btn-item,
+    button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px;
+      border: none;
+      background: #26a9e0;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+    }
+
+    button {
+      width: 100%;
+    }
+
+    button:hover,
+    .btn-item:hover {
+      background: #85d6de;
+    }
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display:none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 1026px; /* Full width */
+  height: 500px; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(53, 65, 112); /* Fallback color */
+  color: #fff;
+
+  margin-left: 100px;
+  margin-top: 20px;
+  padding-right: 0;
+  border: 2px solid grey;
+  border-radius:10px;
+  transform: scale(1);
+  transition: height 2s ease, transform 2s ease;
+}
+.modal.active-on-click{
+  transform: scale(1);
+}
+
+@media (min-width: 568px) {
+
+html,
+body {
+  height: 100%;
+}
+
+.modal {
+  flex-direction:row;
+  
+
+}
+
+.left-part,
+form {
+  flex: 1;
+  height: auto;
+  
+}
+
+.item i {
+
+  position: absolute;
+  font-size: 20px;
+  color: #a3c2c2;
+}
+
+.item i {
+  right: 1%;
+  top: 70px;
+  z-index: 1;
+}
+}
+.left-part{
+    padding: 25px;
+    margin-top: 70px;
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color:#0a0a0d;
+  margin-top:10px ;
+  margin-right: 0;
+  border: 4px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  color: white;
+  border-radius: 10px;
+}
+table,
+    th,
+    td {
+      border: 2px solid white;
+      border-collapse: collapse;
+    }
+
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #e1d0d0;
+  font-size: 35px;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  background-color: #0a0a0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius:10px ;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Download</button>
+
+<div id="id01" class="modal">
+    <div class="imgcontainer">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      </div>
+  <aside style="float:left ;">
+    <div class="left-part">
+        <h2>Batch Details</h2>
+        <table style="width: 100%;">
+          <tbody>
+            <tr>
+              <td>Duration</td>
+              <td>4 Months</td>
+            </tr>
+            <tr>
+              <td>Days</td>
+              <td>Tue, Thus & sat</td>
+            </tr>
+            <tr>
+              <td>Timing (IST)</td>
+              <td>7:00 PM – 9:00 PM</td>
+            </tr>
+            <tr>
+              <td>Start Date</td>
+              <td>June 10, 2023</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+        </aside>
+        <aside style="float: right;">
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    
+    <div class="container">
+        <div class="title">
+            <pre>
+            <h1>Get Course Brochure</h1>
+            <h3 style="color: red;">Program Commences : June 10, 2023</h3>
+          </pre>
+          </div>
+          <div class="colums">
+            <div class="items"><label for="fname"><input class="fname" type="text" name="first name"
+                  placeholder="first name"></label></div>
+            <div class="items"><label for="lname"><input class="lname" type="text" name="last name"
+                  placeholder="last name"></label></div>
+            <div class="items"><label for="phone number"><input type="text" name="phone number"
+                  placeholder="Phone number"></label></div>
+            <div class="items"><label for="email"><input type="text" name="email" placeholder="Email"></label></div>
+  
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="checkbox"><span> I agree to IIDE's <a href="terms-and-condition.html">Terms and
+                Conditions </a>and their <a href="privacy.html">Privacy Policy</a></span>
+          </div>
+          <button type="submit" href="/">Submit</button>
+      </div>
+  </form>
+  </aside>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
